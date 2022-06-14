@@ -1,26 +1,12 @@
-package test.java;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+package test.Cases;
 import org.testng.annotations.Test;
 import test.pages.TripPage;
 
-public class  TripSearchAutomation {
-
-    static WebDriver driver = null;
-
-    @BeforeTest
-    public void Setup() throws InterruptedException {
-        driver = new FirefoxDriver();
-        //JavascriptExecutor js = (JavascriptExecutor) driver;
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
+public class  TripSearchAutomation extends Base {
 
     @Test
     public void TripSearch() throws InterruptedException {
-        driver.get("https://www.tripadvisor.com/");
+
         TripPage.button(driver).click();
         Thread.sleep(5000);
         TripPage.element1(driver).click();
@@ -41,15 +27,8 @@ public class  TripSearchAutomation {
        */
        // TripPage.checkBox(driver).click();
 
-        System.out.println(TripPage.getTitle(driver).getText());
+        //System.out.println(TripPage.getTitle(driver).getText());
 
-    }
-
-    @AfterTest
-    public void tearDown(){
-        driver.close();
-        driver.quit();
-        System.out.println("Test run successfully");
     }
 
 }
