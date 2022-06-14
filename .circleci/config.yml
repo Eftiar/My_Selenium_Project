@@ -8,7 +8,7 @@ orbs:
 jobs:
   setup:
     docker:
-      - image: 'cimg/node:13.12-browsers'
+      - image: cimg/node:13.12-browsers
     steps:
       - checkout
       - browser-tools/install-firefox
