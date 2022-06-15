@@ -36,9 +36,7 @@ jobs:
           name: Build
           command: mvn -B -DskipTests clean package
       # Then run your tests!
-      - run:
-          name: Test
-          command:
+      - run: |
           mvn  test -Dtest=TripSearchAutomation
           node --version
           java --version
