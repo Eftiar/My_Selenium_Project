@@ -38,9 +38,6 @@ jobs:
       # Then run your tests!
       - run: |
           mvn  test -Dtest=TripSearchAutomation
-          node --version
-          java --version
-          google-chrome --version
 
 
 # Invoke jobs via workflows
