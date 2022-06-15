@@ -8,7 +8,7 @@ public class  TripSearchAutomation extends Base {
     public void TripSearch() throws InterruptedException {
 
         TripPage.button(driver).click();
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         TripPage.element1(driver).click();
         TripPage.element1(driver).sendKeys("Switzerland");
         Thread.sleep(5000);
