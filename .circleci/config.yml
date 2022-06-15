@@ -10,7 +10,7 @@ jobs:
     steps:
       - browser-tools/install-browser-tools
       - checkout
-      - run: |
+      - run: | 
           node --version
           java --version
           google-chrome --version
